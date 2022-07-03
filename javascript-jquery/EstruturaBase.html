@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estrutra Base</title>
+
+    <!--Codigo Javascript-->
+    <script>
+      //Variaveis
+      var nome = 'Lucas'
+      var idade = 22
+      var altura = 1.86
+      var formado = true
+
+      // //Exibindo uma caixa de mensagem
+      // alert(
+      //   nome +
+      //     ', ' +
+      //     idade +
+      //     ' anos, ' +
+      //     altura +
+      //     ' de altura, formado? ' +
+      //     formado
+      // )
+
+      // //pegar a primeira letra ou nome
+      // alert(nome.indexOf('a'))
+
+      // //pegar a ultima letra ou nome
+      // alert(nome.lastIndexOf('s'))
+
+      // //extrair elementos
+      // alert(nome.slice(2))
+
+      // //arredondar nota
+      // alert(Math.round(altura))
+
+      // //min e max
+      // alert(Math.max(10, 5))
+
+      // //aleatorio
+      // alert(Math.random() * 100)
+
+      //alerta
+      //criar mensagem no click button
+      // function mensagem() {
+      //   alert('voce clicou')
+      // }
+
+      //select
+      // function mensagem() {
+      //   var curso = document.getElementById('aulas').value
+
+      //   alert(curso)
+      // }
+
+      /*evento de teclado
+
+        onKeyUp: Exibe o caractere e depois executa a acao
+
+        onKeyDown: executa a acao e depois exibe o caractere
+
+        onKeyPress: executa a acao e depois exibe o caractere, não tem suporte do F1...F12, alt, ctrl, shift
+
+      */
+
+      // function exibir() {
+      //   var campo = document.getElementById('campo').value
+      //   alert(campo)
+      // }
+
+      // pegar por tagName
+      // function acao() {
+      //   var texto = document.getElementsByTagName('h1')[0]
+
+      //   alert(texto.innerHTML)
+      // }
+
+      // pegar por className
+      function acao() {
+        var texto = document.getElementsByClassName('texto')[2]
+
+        alert(texto.innerHTML)
+      }
+    </script>
+  </head>
+  <!--Para usar um popup é exclusivo no body-->
+  <body onload="mensagem()">
+    <button onclick="mensagem()">Clique aqui</button>
+
+    <select name="aula" id="aulas" onchange="mensagem()">
+      <option value="">Selecione a aula</option>
+      <option value="HTML">HTML</option>
+      <option value="CSS">CSS</option>
+      <option value="JavaScript">JavaScript</option>
+    </select>
+
+    <!-- Exemplo Evento de teclado -->
+    <h3>Evento de teclado</h3>
+    <p>
+      <input type="text" name="texto" id="campo" onkeyup="exibir()" />
+    </p>
+
+    <!-- Pegar por TagName -->
+    <div>
+      <h1>Aula 1</h1>
+      <h1>Aula 2</h1>
+      <h1>Aula 3</h1>
+      <p><button onclick="acao()">Selecione o h1</button></p>
+    </div>
+
+    <div>
+      <h1 class="texto">h1</h1>
+      <h2 class="texto">h2</h2>
+      <p class="texto">p</p>
+    </div>
+  </body>
+</html>
